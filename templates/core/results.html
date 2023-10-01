@@ -1,0 +1,16 @@
+{% include "base.html" %}
+
+{% block content %}
+
+
+<h1>Result</h1>
+<h3>Original Text</h3>
+ <p>{{ text }}</p>
+<h3>Most similar document</h3>
+
+<p>{{ similar_search_result.document }}</p>
+
+<a href={% url 'core:index' %}>Back to List</a>
+
+
+{% endblock content %}
