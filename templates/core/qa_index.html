@@ -6,7 +6,7 @@
     <ul class="list-group">
 {% for article in articles %} 
 <li class="list-group-item">
-<h1 class="text-success">Article #{{ forloop.counter }}</h1>
+<h1 class="text-success">{{ article.collection.name }}Article #{{ forloop.counter }}</h1>
  <p class="fw-light">{{ article.document }}</p>
  
 </li>

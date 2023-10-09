@@ -1,0 +1,30 @@
+{% include "base.html" %}
+<div class="container">
+{% block content %}
+
+<article>
+    <header>Header</header>
+    <form method="POST" action="{% url 'data_set:create_collection' %}">
+        {% csrf_token %}
+    
+    
+    
+      
+          <!-- Markup example 1: input is inside label -->
+          <label for="dataset_name">
+            Data Set
+            <input type="text" id="collection_name" name="collection_name" placeholder="Data set name" required>
+          </label>
+    
+      
+    
+        <!-- Button -->
+        <button type="submit">Submit</button>
+      
+      </form>
+    
+    <footer>Footer</footer>
+  </article>
+
+{% endblock content %}
+</div>

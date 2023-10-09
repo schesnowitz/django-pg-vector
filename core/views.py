@@ -11,12 +11,12 @@ def index(request):
   if request.method == "POST":
     text = request.POST.get('input_text')
     embedding = embed_input(text)
-    # embeding_model = LangchainPgEmbedding.objects.create(
-    #   uuid=uuid.uuid4(),
-    #   embedding=embedding,
-    #   document=text,
-    # )
-    # print(embeding_model.pk)
+    embeding_model = LangchainPgEmbedding.objects.create(
+      uuid=uuid.uuid4(),
+      embedding=embedding,
+      document=text,
+    )
+    print(embeding_model.pk)
     document = LangchainPgEmbedding.objects.order_by(
       L2Distance('embedding', embedding)
       ).first()

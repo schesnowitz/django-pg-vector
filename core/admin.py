@@ -1,3 +1,4 @@
 from django.contrib import admin
-
-# Register your models here.
+from . models import LangchainPgCollection, LangchainPgEmbedding
+admin.site.register(LangchainPgCollection)
+admin.site.register(LangchainPgEmbedding)

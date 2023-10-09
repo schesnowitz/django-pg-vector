@@ -1,0 +1,27 @@
+{% include "base.html" %}
+<div class="container">
+{% block content %}
+{{data_collection.name}}
+    <form method="POST" action="">     
+        {% csrf_token %}
+
+        
+            <label for="create_data_embedding" class="form-label">*Search embedding:</label>
+            <input id="search_embeddings" name="search_embeddings" class="form-control"/>
+        
+
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+ 
+
+<h1>Result</h1>
+<h3>Original Text</h3>
+ <p>{{ search }}</p>
+<h3>Most similar document</h3>
+
+<p>{{ similar_search_result.document }}</p>
+</div> 
+{% endblock content %}
